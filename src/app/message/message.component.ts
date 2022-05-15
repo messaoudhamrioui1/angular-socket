@@ -8,5 +8,7 @@ import { MessageServiceService } from '../../message-service.service';
 })
 export class MessageComponent implements OnInit {
   constructor(private socketService: MessageServiceService) {}
-  ngOnInit() {}
+  ngOnInit() {
+    this.socketService.setupSocketConnection();
+  }
 }
