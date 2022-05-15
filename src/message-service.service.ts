@@ -5,7 +5,7 @@ import { io } from 'socket.io-client';
 export class MessageServiceService {
   socket;
 
-  constructor() {}
+  constructor(private socketService: MessageServiceService) {}
 
   setupSocketConnection() {
     this.socket = io(environment.apiURL);
